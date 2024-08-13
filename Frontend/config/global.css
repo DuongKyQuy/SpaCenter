@@ -1,16 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Love+Light&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-:root{
+:root {
   /* Màu sắc */
-  --color-primary: #3498db;
-  --color-secondary: #2ecc71;
+  --color-primary: #ffffff;
+  --color-secondary: #000000;
   --color-background: #f5f5f5;
+  --color-line-services: #c6c6c6;
 
-  /* Phông chữ */
-  --font-family-logo:'Love Light', cursive;
-  --font-family-base: 'Arial', sans-serif;
-  --font-size-base: 16px;
-  --font-size-large: 24px;
+  /* Font chữ LOGO */
+  --font-family-logo: 'Love Light', cursive;
+
+  /* Font chữ */
+  --font-family-base: 'Roboto', sans-serif;
+  --font-family-content: "Be Vietnam Pro", sans-serif;
+  --font-size-xxl: 128px;
+  --font-size-xl: 64px;
+  --font-size-lg: 48px;
+  --font-size-md: 32px;
+  --font-size-sm: 24px;
+  --font-size-xs: 20px;
+  --font-weight-thin: 100;
+  --font-weight-extralight: 200;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
 
   /* Khoảng cách */
   --spacing-small: 8px;
@@ -19,4 +34,14 @@
 
   /* Đường viền */
   --border-radius-small: 4px;
+
+  /*welcome */
+  --color-slogan-guest: #4c4c4c;
+  --color-background-btn: #d3d3d3;
+
+  /* signup-signin */
+  --color-border: #dfdfdf;
+  --color-placehold-input: #bebebe;
+  --color-login: #30C63A;
+  --border-input: 52px;
 }
