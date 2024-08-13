@@ -1,5 +1,12 @@
 /* style.css */
 *{
+  font-family: var(--font-family-base);
   padding: 0;
   margin: 0;
 }
+
+body {
+  background-color: var(--color-background);
+  margin: 30px 100px;
+}
+

@@ -1,4 +1,27 @@
 #header {
-  background-color: black;
+  /* background-color: var(--color-primary); */
   height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo{
+  color: var(--color-secondary);
+  font-family: var(--font-family-logo);
+  font-size: var(--font-size-lg);
+}
+.menu{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.menu a{
+  text-decoration: none;
+  color: var(--color-secondary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
 }
