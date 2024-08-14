@@ -1,0 +1,42 @@
+#banner {
+  position: relative;
+  height: 600px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin: 30px 0px;
+}
+
+#banner .content {
+  margin-top: 30px;
+}
+
+#banner .content h1{
+
+}
+
+#banner .wrapper-p{
+  margin: 40px 0px;
+  width: 83%;
+}
+
+#banner .content p {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-extralight);
+  font-family: var(--font-family-content);
+}
+
+
+#banner .container-img h1 {
+  position: absolute;
+  top: 30px;
+  left: 53%;
+  color: var(--color-primary);
+  /* letter-spacing: var(--spacing-xsmall); */
+}
+
+#banner .img-banner {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  border-radius: var(--border-radius-small);
+}

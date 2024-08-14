@@ -14,27 +14,6 @@ function loadComponent(component) {
     });
 }
 
-function loadScript(component) {
-  console.log('js:',component);
-  fetch(`components/${component}/${component}.js`)
-    .then((response) => {
-      if (!response.ok) {
-        return 404
-      }
-      return response.text();
-    })
-    .then((js) => {
-      if (!js || js === 404) {
-        return
-      }
-      const script = document.createElement("script");
-      script.text = js;
-      document.body?.appendChild(script);
-    })
-    .catch((error) => {
-    });
-} 
-
 document.addEventListener('DOMContentLoaded', function () {
   [
     // add component to load in index.html
