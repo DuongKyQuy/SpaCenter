@@ -28,8 +28,10 @@ function loadPage(page) {
     });
 }
 
-function loadScript(component) {
-  fetch(`components/${component}/${component}.js`)
+function loadScript(page) {
+  console.log('log page:',page);
+  
+  fetch(`pages/${page}/${page}.js`)
     .then((response) => {
       if (!response.ok) {
         return 404
@@ -53,18 +55,21 @@ document.addEventListener('DOMContentLoaded', function () {
     // add component to load in index.html
     'header',
     'footer',
+    'banner',
+    'gallery',
   ].forEach((component) => {
     loadComponent(component);
-    // try {
-    //   loadScript(component);
-    // } catch (e) { }
   });
 
-  [
-    // add page to load in index.html
-    'home'
-  ].forEach((page) => {
-    loadPage(page);
-    
-  });
+  // [
+  //   // add page to load in index.html
+  //   'home'
+  // ].forEach((page) => {
+  //   loadPage(page);
+  //   try {
+  //     loadScript(page);
+  //   } catch (e) {
+
+  //   }
+  // });
 });

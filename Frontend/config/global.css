@@ -28,6 +28,7 @@
   --font-weight-bold: 700;
 
   /* Khoảng cách */
+  --spacing-xsmall: 6px;
   --spacing-small: 8px;
   --spacing-medium: 16px;
   --spacing-large: 24px;
