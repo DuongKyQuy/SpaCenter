@@ -1,4 +1,5 @@
 function loadComponent(component) {
+  console.log('run component:', component);
   fetch(`./components/${component}/${component}.html`)
     .then((response) => response.text())
     .then((html) => {
@@ -13,22 +14,8 @@ function loadComponent(component) {
     });
 }
 
-function loadPage(page) {
-  fetch(`./pages/${page}/${page}.html`)
-    .then((response) => response.text())
-    .then((html) => {
-      const container = document.querySelector(`#${page}`);
-      const temp = document.createElement('template');
-      temp.innerHTML = html;
-      container.replaceWith(temp.content);
-    })
-    .catch((error) => {
-      content.innerHTML =
-        '<p>Sorry, an error occurred while loading the content.</p>';
-    });
-}
-
 function loadScript(component) {
+  console.log('js:',component);
   fetch(`components/${component}/${component}.js`)
     .then((response) => {
       if (!response.ok) {
@@ -51,20 +38,8 @@ function loadScript(component) {
 document.addEventListener('DOMContentLoaded', function () {
   [
     // add component to load in index.html
-    'header',
-    'footer',
+    'banner',
   ].forEach((component) => {
     loadComponent(component);
-    // try {
-    //   loadScript(component);
-    // } catch (e) { }
-  });
-
-  [
-    // add page to load in index.html
-    'home'
-  ].forEach((page) => {
-    loadPage(page);
-    
   });
 });
