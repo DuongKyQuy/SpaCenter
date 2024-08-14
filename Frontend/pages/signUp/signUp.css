@@ -1,9 +1,10 @@
 @import url(../../config/global.css);
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: var( --font-family-base);
+    font-family: var(--font-family-base);
 }
 
 body {
@@ -28,63 +29,65 @@ body {
 }
 
 .signup-form {
-    padding: 20px 40px;
+    padding: 12px 20px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     min-height: 0;
     flex-shrink: 1;
 }
 
-.signup-form .logo h1 {
+.signup-form .logo p {
     font-family: var(--font-family-logo);
     font-size: var(--font-size-xs);
-    font-weight: var(--font-weight-regular);
     margin-bottom: 20px;
-
 }
 
-.signup-form h2 {
+.signup-form span {
     text-align: center;
     margin-bottom: 30px;
-    font-size: 24px;
-    font-weight: bold;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
 }
+
 
 .signup-form label {
     display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
+    margin-bottom: 4px;
+    font-weight: var(--font-weight-medium);
+    font-size: 12px;
 }
 
 .signup-form input {
     width: 100%;
-    padding: 12px;
+    padding: 8px;
     margin-bottom: 20px;
-    border-radius: 25px;
-    border: 1px solid #ccc;
+    border-radius: 24px;
+    border: 1px solid #dfdfdf;
 }
 
 .signup-form .login-link {
-    text-align: center;
+    text-align: left;
     margin-bottom: 20px;
+    font-size: 12px;
+    font-weight: var(--font-weight-medium);
 }
 
 .signup-form .login-link a {
-    color: green;
+    color: var(--color-login);
     text-decoration: none;
+    font-weight: var(--font-weight-medium);
 }
 
 .signup-form button {
     width: 100%;
-    padding: 15px;
+    padding: 8px;
     background-color: black;
     color: white;
     border: none;
-    border-radius: 25px;
+    border-radius: 24px;
     font-size: 16px;
     cursor: pointer;
-    font-weight: bold;
+    font-weight: var(--font-weight-medium);
 }
 
 .signup-form button:hover {
@@ -93,6 +96,10 @@ body {
 
 .signup-image img {
     width: 100%;
-    height: 100%;
+    height: 90%;
     object-fit: cover;
+}
+
+.signup-form input::placeholder{
+    color: var(--color-placehold-input);
 }
