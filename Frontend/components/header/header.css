@@ -1,15 +1,16 @@
 #header {
   /* background-color: var(--color-primary); */
-  height: 50px;
+  height: var(--height-heade);
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.logo{
+.logo-header{
   color: var(--color-secondary);
   font-family: var(--font-family-logo);
   font-size: var(--font-size-lg);
+  /* font-size: var(--font-size-xl); */
 }
 .menu{
   height: 100%;

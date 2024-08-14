@@ -7,6 +7,10 @@
 
 body {
   background-color: var(--color-background);
-  margin: 30px 100px;
 }
+
+#wrapper-content{
+  margin: 20px 10%;
+}
+
 
