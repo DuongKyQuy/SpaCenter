@@ -44,4 +44,8 @@
   --color-placehold-input: #bebebe;
   --color-login: #30C63A;
   --border-input: 52px;
+
+  /* Chiều cao Header Footer */
+  --height-header: 60px; 
+  --height-footer: 250px;
 }
