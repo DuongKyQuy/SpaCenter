@@ -10,7 +10,11 @@ body {
 }
 
 #wrapper-content {
-  margin: 20px 10%;
+  padding: 20px 10%;
+}
+
+#footer{
+  padding: 20px 10%;
 }
 
 main{
