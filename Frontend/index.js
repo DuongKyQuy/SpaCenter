@@ -57,6 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
     'footer',
     'banner',
     'gallery',
+    // 'bookingnow'
   ].forEach((component) => {
     loadComponent(component);
   });

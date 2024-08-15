@@ -1,6 +1,6 @@
 /* style.css */
 * {
-  font-family: var(--font-family-base);
+  font-family: var(--font-family-content);
   padding: 0;
   margin: 0;
 }
@@ -10,22 +10,36 @@ body {
 }
 
 #wrapper-content {
-  padding: 20px 10%;
+  margin: 20px 5%;
 }
 
-#footer{
-  padding: 20px 10%;
+#footer {
+  padding: 20px 5%;
 }
 
-main{
+main {
   width: 100%;
 }
 
 h1 {
   font-size: var(--font-size-xxl);
   font-weight: var(--font-weight-light);
-  font-family: var(--font-family-content);
   letter-spacing: var(--spacing-small);
+}
+
+h2 {
+  
+}
+
+h3 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-light);
+}
+
+h4 {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-family-base);
 }
 
 .container-btn {
