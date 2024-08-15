@@ -28,7 +28,8 @@ h1 {
 }
 
 h2 {
-  
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-medium);
 }
 
 h3 {

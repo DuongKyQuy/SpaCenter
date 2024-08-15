@@ -1,0 +1,26 @@
+#bookingnow {
+  background-image: url("../../assets/h2.jpg");
+  height: 810px;
+  width: 100%;
+  background-position: center;
+  background-size: auto;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.container-bookingnow{
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#form-bookingnow{
+  display: flex;
+  flex-direction: column;
+}
+
+#wrapper-booking > input{
+  border: none;
+  /* width: ; */
+}
