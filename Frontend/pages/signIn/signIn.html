@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In</title>
+    <link rel="stylesheet" href="./signIn.css" />
+  </head>
+  <body>
+    <div id="signin">
+      <div class="col1">
+        <div class="logo">
+          <p>SpaCenter</p>
+        </div>
+        <div class="signin-form">
+          <span>Welcome Back To SpaCenter</span>
+          <form id="loginForm">
+            <label for="fullname">FullName <span class="error"
+                id="nameError">*</span></label>
+            <input
+              type="text"
+              id="fullname"
+              name="fullname"
+              placeholder="Enter your name"
+              required />
+
+            <label for="password">PassWord <span class="error"
+                id="passwordError">*</span></label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Enter your password"
+              required />
+
+            <p class="forgot-link">
+              <a href="#">Forgot Password?</a>
+            </p>
+
+            <button type="submit">Sign In</button>
+          </form>
+        </div>
+
+      </div>
+      <div class="col2">
+        <img src="/Frontend/assets/signin.jpg" alt="Decorative Image" />
+      </div>
+    </div>
+
+    <script src="./signIn.js"></script>
+  </body>
+</html>

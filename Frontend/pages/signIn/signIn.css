@@ -16,7 +16,7 @@ body {
     overflow: hidden;
 }
 
-#signup {
+#signin {
     display: flex;
     width: 80%;
     background-color: white;
@@ -43,28 +43,28 @@ body {
     left: 20px;
 }
 
-.signup-form {
+.signin-form {
     display: flex;
     flex-direction: column;
     width: 100%;
     max-width: 360px;
 }
 
-.signup-form span {
+.signin-form span {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     font-size: var(--font-size-sm);
     font-weight: var(--font-weight-semibold);
 }
 
-.signup-form label {
+.signin-form label {
     display: block;
     margin-bottom: 4px;
     font-weight: var(--font-weight-medium);
     font-size: 12px;
 }
 
-.signup-form input {
+.signin-form input {
     width: 100%;
     padding: 8px;
     margin-bottom: 12px;
@@ -72,21 +72,20 @@ body {
     border: 1px solid #dfdfdf;
 }
 
-.login-link {
-    text-align: left;
+.forgot-link {
+    text-align: right;
     margin-bottom: 20px;
-    font-size: 12px;
-    font-weight: var(--font-weight-medium);
 }
 
-.login-link a {
+.forgot-link a {
     font-size: 12px;
-    color: var(--color-login);
+    color: var(--color-secondary);
     text-decoration: none;
     font-weight: var(--font-weight-medium);
+
 }
 
-.signup-form button {
+.signin-form button {
     width: 100%;
     padding: 12px;
     background-color: rgb(54, 54, 54);
@@ -98,7 +97,7 @@ body {
     font-weight: var(--font-weight-medium);
 }
 
-.signup-form button:hover {
+.signin-form button:hover {
     background-color: #3f2c1f;
 }
 
@@ -115,7 +114,7 @@ body {
     object-fit: cover;
 }
 
-.signup-form input::placeholder {
+.signin-form input::placeholder {
     color: var(--color-placehold-input);
 }
 
@@ -129,7 +128,7 @@ body {
 
 /* Responsive: Hide col2 on small screens */
 @media (max-width: 768px) {
-    #signup {
+    #signin {
         width: 90%;
         flex-direction: column;
     }

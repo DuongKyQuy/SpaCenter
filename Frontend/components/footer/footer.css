@@ -1,3 +1,4 @@
+@import url(../../config/global.css);
 #footer{
   background-color: var(--color-secondary);
   height: var(--height-footer);
