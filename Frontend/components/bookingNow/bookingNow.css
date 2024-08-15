@@ -1,0 +1,53 @@
+#bookingnow {
+  background-image: url("../../assets/book.png");
+  height: var(--height-bookingnow);
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: var(--border-radius-small);
+  margin: var(--margin-40) 0px;
+}
+
+.container-bookingnow {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-bookingnow h2 {
+  margin-bottom: var(--margin-20);
+}
+
+#form-bookingnow {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-30);
+}
+
+#form-bookingnow > input {
+  padding: 10px 8px;
+  border-radius: var(--border-radius-medium);
+  border: 1px solid #747474;
+}
+
+.form-group-bookingnow {
+  display: flex;
+  gap: var(--gap-20);
+}
+
+.form-group-bookingnow > input {
+  width: 50%;
+  padding: 10px 8px;
+  border-radius: var(--border-radius-medium);
+  border: 1px solid #747474;
+}
+
+@media (max-width: 1024px) {
+  .container-bookingnow {
+    width: 100%;
+  }
+}

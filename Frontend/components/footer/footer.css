@@ -34,15 +34,13 @@
   object-fit: cover;
   cursor: pointer;
   max-height: 200px;
+  width: -webkit-fill-available;
 }
 .connect h4 {
   margin-bottom: 10px;
 }
 
 @media (max-width: 1024px) {
-  .connect img {
-    width: 100%;
-  }
 }
 
 @media (max-width: 768px) {
@@ -50,6 +48,7 @@
   .customer-service {
     gap: var(--gap-10);
   }
+
   h4 {
     font-size: var(--font-size-xxs);
   }

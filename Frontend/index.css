@@ -1,4 +1,3 @@
-/* style.css */
 * {
   font-family: var(--font-family-content);
   padding: 0;
@@ -28,7 +27,8 @@ h1 {
 }
 
 h2 {
-  
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-regular);
 }
 
 h3 {
