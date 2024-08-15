@@ -1,4 +1,8 @@
 #gallery {
+  img {
+    border-radius: var(--border-radius-small);
+  }
+
   h2 {
     margin-bottom: 20px;
   }
@@ -18,9 +22,9 @@
   }
 
   .g-c1 img {
-    height: 343px;
-    width: 100%;
     object-fit: cover;
+    width: 100%;
+    height: 343px;
   }
 
   .g-c2 img {
@@ -70,7 +74,7 @@
   #gallery .g-c2 img,
   #gallery .g-c3 img {
     height: auto;
-    max-height: 100px;
+    max-height: 200px;
   }
 
   #gallery .g-c3 img {
