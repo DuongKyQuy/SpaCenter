@@ -19,31 +19,125 @@
 }
 
 .container-bookingnow h2 {
-  margin-bottom: var(--margin-20);
+  margin-bottom: var(--margin-40);
 }
 
 #form-bookingnow {
   display: flex;
   flex-direction: column;
-  gap: var(--gap-30);
+  gap: var(--gap-12);
 }
 
 #form-bookingnow > input {
-  padding: 10px 8px;
+  padding: 12px 8px;
   border-radius: var(--border-radius-medium);
-  border: 1px solid #747474;
+  border: 0.8px solid #747474;
+  font-size: 16px;
 }
 
-.form-group-bookingnow {
+.form-select-bookingnow {
   display: flex;
   gap: var(--gap-20);
 }
 
-.form-group-bookingnow > input {
+.form-select-bookingnow  input,select {
   width: 50%;
-  padding: 10px 8px;
+  padding: 12px 8px;
   border-radius: var(--border-radius-medium);
-  border: 1px solid #747474;
+  border: 0.8px solid #747474;
+  font-size: 16px;
+}
+
+input[type="date"] {
+  position: relative;
+  padding: 10px;
+  color: #747474;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  color: transparent;
+  background: none;
+  z-index: 1;
+}
+
+input[type="date"]:before {
+  color: transparent;
+  background: none;
+  display: block;
+  font-family: 'FontAwesome';
+  content: '\f073';
+  width: 16px;
+  height: 20px;
+  position: absolute;
+  top: 16px;
+  right: 8px;
+  color: #747474;
+}
+
+.select-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+#service-booking {
+  appearance: none; 
+  -webkit-appearance: none; 
+  -moz-appearance: none; 
+  width: 100%;
+  border-radius: 4px;
+  border: 0.8px solid #747474;
+  color: #747474;
+}
+
+.select-wrapper::after {
+  content: '\f107'; 
+  font-family: 'FontAwesome';
+  position: absolute;
+  right: 8px; 
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none; 
+  color: #747474; 
+}
+
+#staff-booking{
+  appearance: none; 
+  -webkit-appearance: none; 
+  -moz-appearance: none; 
+  border-radius: 4px;
+  border: 0.8px solid #747474;
+  width: 100%;
+  color: #747474;
+}
+
+#time-booking {
+  display: flex;
+  flex-direction: column;
+  width: 100%; 
+}
+
+.row1, .row2 {
+  display: flex;
+  width: 100%;
+  gap: 8px; 
+  margin-bottom: 8px; 
+}
+
+#time-booking button {
+  flex: 1; 
+  padding: 8px;
+  font-size: 12px; 
+  font-weight: var(--font-weight-semibold);
+  color: #747474; 
+  border:  0.8px solid #747474; 
+  border-radius: 4px; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease; 
+}
+
+#time-booking button:hover {
+  background-color: #c6c6c6; 
 }
 
 @media (max-width: 1024px) {

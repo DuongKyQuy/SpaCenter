@@ -1,3 +1,18 @@
+var passwordInput = document.getElementById('password');
+var toggler = document.getElementById('toggler');
+
+toggler.addEventListener('click', function () {
+    if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        toggler.classList.remove('fa-eye-slash');
+        toggler.classList.add('fa-eye');
+    } else {
+        passwordInput.type = 'password';
+        toggler.classList.remove('fa-eye');
+        toggler.classList.add('fa-eye-slash');
+    }
+});
+
 document.getElementById('registerForm').addEventListener('submit', function (e) {
     e.preventDefault();
     var fullname = document.getElementById('fullname').value.trim();
@@ -30,6 +45,8 @@ document.getElementById('registerForm').addEventListener('submit', function (e) 
         document.getElementById('emailError').style.display = 'none';
     }
 
-
+    if (valid) {
+        console.log("Form submitted successfully!");
+    }
 
 })

@@ -64,6 +64,30 @@ body {
     font-size: 12px;
 }
 
+.password-field {
+    position: relative;
+}
+
+.password-field #toggler {
+    position: absolute;
+    right: 20px;
+    top: 40%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.far.fa-eye {
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    opacity: 0.8;
+}
+
+.fa-eye-slash {
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    opacity: 0.8;
+}
+
 .signin-form input {
     width: 100%;
     padding: 8px;
@@ -118,6 +142,11 @@ body {
     color: var(--color-placehold-input);
 }
 
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+    display: none;
+}
+
 /* Format the red * so that it only displays when there is an error */
 .error {
     color: red;
@@ -140,3 +169,4 @@ body {
         height: auto;
     }
 }
+

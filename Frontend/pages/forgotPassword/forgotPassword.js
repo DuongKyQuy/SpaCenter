@@ -10,6 +10,5 @@ document.getElementById('forgotForm').addEventListener('submit', function (e) {
         valid = false;
     } else {
         document.getElementById('emailError').style.display = 'none';
-
     }
 })
