@@ -2,6 +2,7 @@
   font-family: var(--font-family-content);
   padding: 0;
   margin: 0;
+  /* box-sizing: border-box; */
 }
 
 body {
@@ -40,6 +41,19 @@ h4 {
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-bold);
   font-family: var(--font-family-base);
+}
+
+h5 {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-extralight);
+  color: #4A4A4A;
+}
+
+
+p {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-extralight);
+  font-family: var(--font-family-content);
 }
 
 .container-btn {

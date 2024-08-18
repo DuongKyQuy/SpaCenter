@@ -3,8 +3,8 @@
     border-radius: var(--border-radius-small);
   }
 
-  h2 {
-    margin-bottom: 20px;
+  h3 {
+    margin-bottom: var(--margin-20);
   }
 
   .container-gallery {
