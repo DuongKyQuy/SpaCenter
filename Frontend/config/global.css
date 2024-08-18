@@ -6,6 +6,7 @@
   --color-secondary: #000000;
   --color-background: #f5f5f5;
   --color-line-services: #c6c6c6;
+  --color-ourteam: #4A4A4A;
 
   /* Font chữ LOGO */
   --font-family-logo: "Love Light", cursive;
@@ -19,7 +20,7 @@
   --font-size-md: 32px;
   --font-size-sm: 24px;
   --font-size-xs: 20px;
-  --font-size-xxs: 20px;
+  --font-size-xxs: 18px;
   /* Font weight */
   --font-weight-thin: 100;
   --font-weight-extralight: 200;
@@ -56,6 +57,7 @@
   --height-bookingnow: 810px;
 
   /* Gap */
+  --gap-40: 40px;
   --gap-30: 30px;
   --gap-20: 20px;
   --gap-10: 10px;
