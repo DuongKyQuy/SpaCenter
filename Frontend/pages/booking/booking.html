@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking</title>
+  <link rel="stylesheet" href="./booking.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+  <div class="container">
+    <img src="/Frontend/assets/booking.jpg" alt="">
+    <div class="content">
+      <div class="wrapper-booking">
+        <h2>Book service</h2>
+        <form id="form-bookingnow">
+          <input type="text" placeholder="Name" id="name-booking" class="name-booking" />
+          <input type="text" placeholder="Telephone" id="telephone-booking" class="telephone-booking" />
+          <div class="form-select-bookingnow">
+            <input type="date" placeholder="Date" id="date-booking" class="date-booking" />
+            <div class="select-wrapper">
+              <select id="service-booking">
+                <option value="" disabled selected hidden>Select Service</option>
+                <option value="Fullbodymassage">Full body massage</option>
+                <option value="Facialcleansing/massage">Facial cleansing/ massage</option>
+                <option value="Stonemassage">Stone massage</option>
+                <option value="Aromatherapymassage">Aromatherapy massage</option>
+              </select>
+            </div>
+          </div>
+          <div class="select-wrapper">
+            <select id="staff-booking">
+              <option value="" disabled selected hidden>Select Technician</option>
+              <option value="Staff1">Staff1</option>
+              <option value="Staff2">
+                Staff2
+              </option>
+              <option value="Staff3">Staff3</option>
+              <option value="Staff4">Staff4</option>
+            </select>
+          </div>
+
+          <div id="time-booking">
+            <div class="row1">
+              <button>9:00</button>
+              <button>10:00</button>
+              <button>11:00</button>
+              <button>12:00</button>
+              <button>13:00</button>
+            </div>
+            <div class="row2">
+              <button>14:00</button>
+              <button>15:00</button>
+              <button>16:00</button>
+              <button>17:00</button>
+              <button>18:00</button>
+            </div>
+
+          </div>
+          <div class="container-btn">
+            <button class="btn">Book now</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
