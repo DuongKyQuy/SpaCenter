@@ -54,13 +54,14 @@
   /* Chiều cao Header Footer */
   --height-header: 60px;
   --height-footer: 250px;
-  --height-bookingnow: 810px;
+  --height-bookingnow: 812px;
 
   /* Gap */
   --gap-40: 40px;
   --gap-30: 30px;
+  --gap-32: 32px;
   --gap-20: 20px;
-  --gap-10: 10px;
+  --gap-12: 12px;
 
   /* Padding */
 
