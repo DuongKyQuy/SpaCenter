@@ -72,11 +72,11 @@ document.addEventListener("DOMContentLoaded", function () {
   [
     "header",
     "footer",
-    "banner",
-    "gallery",
-    "allservice",
-    "ourteam",
-    "bookingnow",
+    // "banner",
+    // "gallery",
+    // "allservice",
+    // "ourteam",
+    // "bookingnow",
   ].forEach((component) => {
     loadComponent(component);
     try {
@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // add page to load in index.html
-  // ["home", "user"].forEach((page) => {
-  //   loadPage(page);
-  // });
+  ["home", "user"].forEach((page) => {
+    loadPage(page);
+  });
 });

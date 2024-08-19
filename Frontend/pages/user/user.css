@@ -2,6 +2,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 90%;
-  margin: auto;
+  .container-booking-details {
+    background-color: var(--color-user-item);
+
+    .booking-details-item {
+      > p {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .title-booking-details-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+  }
 }
