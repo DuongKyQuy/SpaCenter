@@ -13,20 +13,20 @@ function loadComponent(component) {
     });
 }
 
-// function loadPage(page) {
-//   fetch(`./pages/${page}/${page}.html`)
-//     .then((response) => response.text())
-//     .then((html) => {
-//       const container = document.querySelector(`#${page}`);
-//       const temp = document.createElement("template");
-//       temp.innerHTML = html;
-//       container.replaceWith(temp.content);
-//     })
-//     .catch((error) => {
-//       content.innerHTML =
-//         "<p>Sorry, an error occurred while loading the content.</p>";
-//     });
-// }
+function loadPage(page) {
+  fetch(`./pages/${page}/${page}.html`)
+    .then((response) => response.text())
+    .then((html) => {
+      const container = document.querySelector(`#${page}`);
+      const temp = document.createElement("template");
+      temp.innerHTML = html;
+      container.replaceWith(temp.content);
+    })
+    .catch((error) => {
+      content.innerHTML =
+        "<p>Sorry, an error occurred while loading the content.</p>";
+    });
+}
 
 // function loadScriptPage(page) {
 //   console.log("log page:", page);
@@ -68,8 +68,8 @@ function loadScriptComponent(component) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+  // add component to load in index.html
   [
-    // add component to load in index.html
     "header",
     "footer",
     "banner",
@@ -81,6 +81,13 @@ document.addEventListener("DOMContentLoaded", function () {
     loadComponent(component);
     try {
       loadScriptComponent(component);
-    } catch (e) {}
+    } catch (e) {
+      onsole.error(`Error loading script for component: ${component}`, e);
+    }
   });
+
+  // add page to load in index.html
+  // ["home", "user"].forEach((page) => {
+  //   loadPage(page);
+  // });
 });
