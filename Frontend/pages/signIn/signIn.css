@@ -118,14 +118,6 @@ body {
     color: var(--color-placehold-input);
 }
 
-/* Format the red * so that it only displays when there is an error */
-.error {
-    color: red;
-    display: none;
-    font-size: 16px;
-    margin-left: 4px;
-}
-
 /* Responsive: Hide col2 on small screens */
 @media (max-width: 768px) {
     #signin {
