@@ -37,9 +37,8 @@ form.addEventListener("submit", function (event) {
   }
 
   if (!validateForm()) {
-    return; 
+    return;
   }
-
 
   const formDataSignIn = {
     username: form.email.value.trim(),
@@ -54,9 +53,9 @@ form.addEventListener("submit", function (event) {
   })
     .then((response) => response.json())
     .then((data) => {
-      console.log(data.data.token);
       if (data.status === "success") {
-        alert("Login successful!");
+        const token = data.data.token;
+        localStorage.setItem("authToken", token); // Save the token to localStorage
         window.location.href = "/Frontend/index.html";
       } else {
         alert(data.message || "Login failed.");
