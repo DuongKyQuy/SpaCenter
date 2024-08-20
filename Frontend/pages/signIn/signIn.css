@@ -142,17 +142,6 @@ body {
     color: var(--color-placehold-input);
 }
 
-input[type="password"]::-ms-reveal,
-input[type="password"]::-ms-clear {
-    display: none;
-}
-
-/* Format the red * so that it only displays when there is an error */
-.error {
-    color: red;
-    display: none;
-}
-
 /* Responsive: Hide col2 on small screens */
 @media (max-width: 768px) {
     #signin {

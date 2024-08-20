@@ -14,35 +14,33 @@ toggler.addEventListener("click", function () {
   }
 });
 
-function validateSignIn() {
-  const email = document.getElementById("email").value.trim();
-  var passwordValue = passwordInput.value.trim();
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
 
-  var valid = true;
+  function validateForm() {
+    let isValid = true;
 
-  if (email === "") {
-    document.getElementById("emailError").style.display = "inline";
-    document.getElementById("emailError").style.fontSize = "12px";
-    valid = false;
-  } else {
-    document.getElementById("emailError").style.display = "none";
+    // Kiểm tra email không rỗng
+    if (form.email.value.trim() === "") {
+      alert("Email is required.");
+      isValid = false;
+    }
+
+    // Kiểm tra mật khẩu không rỗng
+    const password = form.password.value.trim();
+    if (password === "") {
+      alert("Password is required.");
+      isValid = false;
+    }
+
+    return isValid;
   }
 
-  if (passwordValue === "") {
-    document.getElementById("passwordError").style.display = "inline";
-    document.getElementById("passwordError").style.fontSize = "12px";
-    valid = false;
-  } else {
-    document.getElementById("passwordError").style.display = "none";
+  if (!validateForm()) {
+    return; 
   }
 
-  if (valid) {
-    console.log("Form submitted successfully!");
-  }
-}
 
-form.addEventListener("submit", function (e) {
-  e.preventDefault();
   const formDataSignIn = {
     username: form.email.value.trim(),
     password: form.password.value.trim(),
@@ -56,15 +54,14 @@ form.addEventListener("submit", function (e) {
   })
     .then((response) => response.json())
     .then((data) => {
+      console.log(data.data.token);
       if (data.status === "success") {
-        const token = data.data.token;
-        localStorage.setItem("authToken", token); // Save the token to localStorage
-        console.log("Token saved to localStorage:", token);
+        alert("Login successful!");
         window.location.href = "/Frontend/index.html";
       } else {
         alert(data.message || "Login failed.");
       }
-    })  
+    })
     .catch((error) => {
       console.error("Error:", error);
       alert("An error occurred. Please try again.");
