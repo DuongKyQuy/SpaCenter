@@ -16,42 +16,42 @@ link_log_out.addEventListener("click", () => {
 
 
 
-const btnLogout = document.querySelector('#logout');
-btnLogout.addEventListener('click', () => {
-  // Retrieve the token from localStorage
-  let token = localStorage.getItem('user');
-  // Parse the token to remove extra double quotes and backslashes
-  if (token) {
-    token = token.replace(/\\\"/g, ''); // Remove backslashes
-    token = token.replace(/\"/g, '');   // Remove double quotes
-  }
-  // Create the userLogout object with the parsed token
-  const userLogout = {
-    token: token,
-  };
-  console.log(userLogout);
-  async function logoutUser() {
-    const url = 'https://onlinecourse.up.railway.app/api/auth/logout';
-    try {
-      const response = await fetch(url, {
-        method: 'POST',
-        body: JSON.stringify(userLogout),
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${token}`,  // Add Bearer token here
-        },
-      });
-      if (!response.ok) {
-        throw new Error('Failed to log out');
-      }
-      const data = await response.json();
-      if (data) {
-        localStorage.removeItem('user');
-        // location.reload(); // Uncomment to reload the page after logout
-      }
-    } catch (error) {
-      console.error('Logout failed:', error.message);
-    }
-  }
-  logoutUser();
-});b
+// const btnLogout = document.querySelector('#logout');
+// btnLogout.addEventListener('click', () => {
+//   // Retrieve the token from localStorage
+//   let token = localStorage.getItem('authToken');
+//   // Parse the token to remove extra double quotes and backslashes
+//   if (token) {
+//     token = token.replace(/\\\"/g, ''); // Remove backslashes
+//     token = token.replace(/\"/g, '');   // Remove double quotes
+//   }
+//   // Create the userLogout object with the parsed token
+//   const userLogout = {
+//     token: token,
+//   };
+//   console.log(userLogout);
+//   async function logoutUser() {
+//     const url = 'https://onlinecourse.up.railway.app/api/auth/logout';
+//     try {
+//       const response = await fetch(url, {
+//         method: 'POST',
+//         body: JSON.stringify(userLogout),
+//         headers: {
+//           'Content-Type': 'application/json',
+//           'Authorization': `Bearer ${token}`,  // Add Bearer token here
+//         },
+//       });
+//       if (!response.ok) {
+//         throw new Error('Failed to log out');
+//       }
+//       const data = await response.json();
+//       if (data) {
+//         localStorage.removeItem('user');
+//         // location.reload(); // Uncomment to reload the page after logout
+//       }
+//     } catch (error) {
+//       console.error('Logout failed:', error.message);
+//     }
+//   }
+//   logoutUser();
+// });b
