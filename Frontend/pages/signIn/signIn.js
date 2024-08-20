@@ -41,8 +41,8 @@ function validateSignIn() {
   }
 }
 
-form.addEventListener("submit", function (event) {
-  event.preventDefault();
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
   const formDataSignIn = {
     username: form.email.value.trim(),
     password: form.password.value.trim(),
@@ -56,14 +56,15 @@ form.addEventListener("submit", function (event) {
   })
     .then((response) => response.json())
     .then((data) => {
-      console.log(data.data.token);
       if (data.status === "success") {
-        alert("Login successful!");
+        const token = data.data.token;
+        localStorage.setItem("authToken", token); // Save the token to localStorage
+        console.log("Token saved to localStorage:", token);
         window.location.href = "/Frontend/index.html";
       } else {
         alert(data.message || "Login failed.");
       }
-    })
+    })  
     .catch((error) => {
       console.error("Error:", error);
       alert("An error occurred. Please try again.");
