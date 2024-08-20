@@ -1,0 +1,62 @@
+<link rel="stylesheet" href="./components/bookingnow/bookingnow.css" />
+
+<div id="bookingnow">
+  <div class="container-bookingnow">
+    <div class="wrapper-booking">
+      <h2>Book service</h2>
+      <form id="form-bookingnow">
+        <input type="text" placeholder="Name" id="name-booking" class="name-booking" />
+        <input type="text" placeholder="Telephone" id="telephone-booking" class="telephone-booking" />
+        <div class="form-select-bookingnow">
+          <input type="date" placeholder="Date" id="date-booking" class="date-booking" />
+          <div class="select-wrapper">
+            <select id="service-booking">
+              <option value="" disabled selected hidden>Select Service</option>
+              <option value="Fullbodymassage">Full body massage</option>
+              <option value="Facialcleansing/massage">Facial cleansing/ massage</option>
+              <option value="Stonemassage">Stone massage</option>
+              <option value="Aromatherapymassage">Aromatherapy massage</option>
+            </select>
+          </div>
+        </div>
+        <div class="select-wrapper">
+          <select id="staff-booking">
+            <option value="" disabled selected hidden>Select Technician</option>
+            <option value="Staff1">Staff1</option>
+            <option value="Staff2">
+              Staff2
+            </option>
+            <option value="Staff3">Staff3</option>
+            <option value="Staff4">Staff4</option>
+          </select>
+        </div>
+        
+        <div id="time-booking">
+          <div class="row1">
+            <button>9:00</button>
+            <button>10:00</button>
+            <button>11:00</button>
+            <button>12:00</button>
+            <button>13:00</button>
+          </div>
+          <div class="row2">
+            <button>14:00</button>
+            <button>15:00</button>
+            <button>16:00</button>
+            <button>17:00</button>
+            <button>18:00</button>
+          </div>
+
+        </div>
+        <div class="container-btn">
+          <button class="btn btn-banner">Book<br />now</button>
+          <svg class="row" xmlns="http://www.w3.org/2000/svg" width="72" height="16" viewBox="0 0 72 16" fill="none">
+            <path
+              d="M70.7357 8.70711C71.1262 8.31658 71.1262 7.68342 70.7357 7.29289L64.3717 0.928932C63.9812 0.538408 63.348 0.538408 62.9575 0.928932C62.567 1.31946 62.567 1.95262 62.9575 2.34315L68.6143 8L62.9575 13.6569C62.567 14.0474 62.567 14.6805 62.9575 15.0711C63.348 15.4616 63.9812 15.4616 64.3717 15.0711L70.7357 8.70711ZM0 9L70.0286 9V7L0 7L0 9Z"
+              fill="black" />
+          </svg>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

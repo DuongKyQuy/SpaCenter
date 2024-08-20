@@ -1,16 +1,83 @@
-/* style.css */
-*{
-  font-family: var(--font-family-base);
+* {
+  font-family: var(--font-family-content);
   padding: 0;
   margin: 0;
+  /* box-sizing: border-box; */
 }
 
 body {
   background-color: var(--color-background);
 }
 
-#wrapper-content{
-  margin: 20px 10%;
+#wrapper-content {
+  margin: 20px 5%;
 }
 
+#footer {
+  padding: 20px 5%;
+}
 
+main {
+  width: 100%;
+}
+
+h1 {
+  font-size: var(--font-size-xxl);
+  font-weight: var(--font-weight-light);
+  letter-spacing: var(--spacing-small);
+}
+
+h2 {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-regular);
+}
+
+h3 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-light);
+}
+
+h4 {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-family-base);
+}
+
+h5 {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-extralight);
+  color: #4a4a4a;
+}
+
+p {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-extralight);
+  font-family: var(--font-family-content);
+}
+
+.container-btn {
+  cursor: pointer;
+  width: fit-content;
+  position: relative;
+}
+.container-btn .btn {
+  background-color: var(--color-background);
+  width: 115px;
+  height: 110px;
+  border-radius: 50%;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-light);
+  text-align: center;
+  border: 1px solid var(--color-secondary);
+  cursor: pointer;
+}
+
+.container-btn > .row {
+  position: absolute;
+  top: 44%;
+  left: 73%;
+}
+
+.none {
+  display: none;
+}

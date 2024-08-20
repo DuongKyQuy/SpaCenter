@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign Up</title>
     <link rel="stylesheet" href="./signUp.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
   </head>
   <body>
     <div id="signup">
@@ -14,47 +18,58 @@
         </div>
         <div class="signup-form">
           <span>Create Your Account</span>
-          <form>
-            <label for="fullname">FullName</label>
+          <form id="registerForm" action>
+            <label for="fullname"
+              >FullName</label
+            >
             <input
               type="text"
               id="fullname"
               name="fullname"
               placeholder="Enter your name"
-              required />
+            />
 
-            <label for="password">Password</label>
+            <label for="password"
+              >PassWord </label
+            >
+            <div class="password-field">
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Enter your password"
+              />
+              <span><i id="toggler" class="far fa-eye-slash"></i></span>
+            </div>
 
-            <input
-              type="password"
-              id="password"
-              name="password"
-              placeholder="Enter your password"
-              required />
-
-            <label for="email">Email</label>
+            <label for="email"
+              >Email </label
+            >
             <input
               type="email"
               id="email"
               name="email"
               placeholder="Enter your email"
-              required />
+            />
 
             <label for="phone">Phone</label>
             <input
               type="tel"
               id="phone"
               name="phone"
-              placeholder="Enter your phone" />
+              placeholder="Enter your phone"
+            />
 
             <p class="login-link">
-              Already have an account? <a href="#">Log in</a>
+              Already have an account?
+              <a href="/Frontend/pages/signIn/signIn.html" target="_parent"
+                >Log in</a
+              >
             </p>
 
             <button type="submit">Sign Up</button>
           </form>
         </div>
-
       </div>
       <div class="col2">
         <img src="/Frontend/assets/signup.jpg" alt="Decorative Image" />

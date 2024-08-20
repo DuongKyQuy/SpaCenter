@@ -1,5 +1,5 @@
-#footer{
-  padding: 20px 100px;
+@import url(../../config/global.css);
+#footer {
   background-color: var(--color-secondary);
   height: var(--height-footer);
   color: var(--color-primary);
@@ -7,12 +7,13 @@
   grid-template-columns: 25% 25% 25% 25%;
 }
 
-#footer a{
+#footer a {
   color: var(--color-line-services);
+  font-weight: var(--font-weight-extralight);
   text-decoration: none;
 }
 
-.logo-footer{
+.logo-footer {
   color: var(--color-secondary);
   font-family: var(--font-family-logo);
   font-size: var(--font-size-xl);
@@ -22,27 +23,33 @@
   cursor: pointer;
 }
 
-#footer h3{
-  font-size: var(--font-size-sm);
-}
-
 .infor,
-.customer-service{
+.customer-service {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: var(--gap-20);
 }
 
-.connect{
-  > img{
-    width: 300px;
-    height: 200px;
-    cursor: pointer;
-  } 
-  h3{
-    padding-bottom: 20px;
+.connect img {
+  object-fit: cover;
+  cursor: pointer;
+  max-height: 200px;
+  width: -webkit-fill-available;
+}
+.connect h4 {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 768px) {
+  .infor,
+  .customer-service {
+    gap: var(--gap-10);
+  }
+
+  h4 {
+    font-size: var(--font-size-xxs);
   }
 }
-
-
-

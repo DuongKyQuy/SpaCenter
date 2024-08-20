@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Love+Light&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Love+Light&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 :root {
   /* Màu sắc */
@@ -6,19 +6,22 @@
   --color-secondary: #000000;
   --color-background: #f5f5f5;
   --color-line-services: #c6c6c6;
+  --color-ourteam: #4A4A4A;
 
   /* Font chữ LOGO */
-  --font-family-logo: 'Love Light', cursive;
+  --font-family-logo: "Love Light", cursive;
 
   /* Font chữ */
-  --font-family-base: 'Roboto', sans-serif;
+  --font-family-base: "Roboto", sans-serif;
   --font-family-content: "Be Vietnam Pro", sans-serif;
-  --font-size-xxl: 128px;
+  --font-size-xxl: 95px;
   --font-size-xl: 64px;
   --font-size-lg: 48px;
   --font-size-md: 32px;
   --font-size-sm: 24px;
   --font-size-xs: 20px;
+  --font-size-xxs: 16px;
+  /* Font weight */
   --font-weight-thin: 100;
   --font-weight-extralight: 200;
   --font-weight-light: 300;
@@ -28,12 +31,15 @@
   --font-weight-bold: 700;
 
   /* Khoảng cách */
+  --spacing-xsmall: 6px;
   --spacing-small: 8px;
   --spacing-medium: 16px;
   --spacing-large: 24px;
 
   /* Đường viền */
   --border-radius-small: 4px;
+  --border-radius-medium: 8px;
+  --border-radius-large: 12px;
 
   /*welcome */
   --color-slogan-guest: #4c4c4c;
@@ -42,10 +48,24 @@
   /* signup-signin */
   --color-border: #dfdfdf;
   --color-placehold-input: #bebebe;
-  --color-login: #30C63A;
+  --color-login: #30c63a;
   --border-input: 52px;
 
   /* Chiều cao Header Footer */
-  --height-header: 60px; 
+  --height-header: 60px;
   --height-footer: 250px;
+  --height-bookingnow: 812px;
+
+  /* Gap */
+  --gap-40: 40px;
+  --gap-30: 30px;
+  --gap-32: 32px;
+  --gap-20: 20px;
+  --gap-12: 12px;
+
+  /* Padding */
+
+  /* Margin */
+  --margin-20: 20px;
+  --margin-40: 40px;
 }

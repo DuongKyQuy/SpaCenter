@@ -1,0 +1,110 @@
+@import url(../../../config/global.css);
+
+body {
+    margin: 0;
+    font-family: var(--font-family-content);
+    background-color: #e8eee7;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 300px;
+    background-color: #808D7C;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.main {
+    padding: 20px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile-image img {
+    width: 68px;
+    height: 68px;
+    margin-right: 12px;
+}
+
+.profile-info h2 {
+    margin: 0;
+    font-size: var(--font-size-sm);
+}
+
+.profile-info p {
+    margin: 0;
+    font-size: var(--font-size-xxs);
+}
+
+hr {
+    border: none;
+    border-top: 0.8px solid #C9DABF;
+    margin: 20px 0;
+}
+
+footer {
+    font-size: 12px;
+    text-align: center;
+    margin-top: auto;
+    background-color: #5F6F65;
+    padding: 20px 0;
+    text-align: center;
+
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    background-color: #F9FFF6;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.booking-table {
+    flex: 1;
+    overflow-y: auto;
+    padding: 12px;
+}
+
+.booking-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.booking-table th,
+.booking-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 0.8px solid #d0d0d0;
+}
+
+.booking-table th {
+    font-weight: var(--font-weight-semibold);
+}
+
+.edit-button,
+.delete-button {
+    border: 0.8px solid #5F6F65;
+    cursor: pointer;
+}
+
+.edit-button img {
+    width: 20px;
+    height: 20px;
+}
+
+.delete-button img {
+    width: 20px;
+    height: 20px;
+}
