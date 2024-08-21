@@ -99,9 +99,9 @@ form.addEventListener("submit", function (e) {
     })
     .then((data) => {
       console.log(data);
-  
       if (data.success) {
-        alert("Registration successful!");
+        // alert("Registration successful!");
+        window.location.href = "/Frontend/pages/signIn/signIn.html"
       } else {
         alert(data.message || "Registration failed.");
       }
@@ -110,8 +110,7 @@ form.addEventListener("submit", function (e) {
       console.error("Error:", error);
       alert(`An error occurred: ${error.message}`);
     });
-  
-  form.reset();
+  // form.reset();
 });
 
 function validateEmail(email) {

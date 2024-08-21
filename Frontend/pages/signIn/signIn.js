@@ -14,27 +14,27 @@ toggler.addEventListener("click", function () {
   }
 });
 
+function validateForm() {
+  let isValid = true;
+
+  // Kiểm tra email không rỗng
+  if (form.email.value.trim() === "") {
+    alert("Email is required.");
+    isValid = false;
+  }
+
+  // Kiểm tra mật khẩu không rỗng
+  const password = form.password.value.trim();
+  if (password === "") {
+    alert("Password is required.");
+    isValid = false;
+  }
+
+  return isValid;
+}
+
 form.addEventListener("submit", function (event) {
   event.preventDefault();
-
-  function validateForm() {
-    let isValid = true;
-
-    // Kiểm tra email không rỗng
-    if (form.email.value.trim() === "") {
-      alert("Email is required.");
-      isValid = false;
-    }
-
-    // Kiểm tra mật khẩu không rỗng
-    const password = form.password.value.trim();
-    if (password === "") {
-      alert("Password is required.");
-      isValid = false;
-    }
-
-    return isValid;
-  }
 
   if (!validateForm()) {
     return;
@@ -53,6 +53,7 @@ form.addEventListener("submit", function (event) {
   })
     .then((response) => response.json())
     .then((data) => {
+      console.log(data);
       if (data.status === "success") {
         const token = data.data.token;
         localStorage.setItem("authToken", token); // Save the token to localStorage

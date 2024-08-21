@@ -77,7 +77,6 @@ document.addEventListener("DOMContentLoaded", function () {
     "allservice",
     "ourteam",
     "bookingnow",
-    // "user"
   ].forEach((component) => {
     loadComponent(component);
     try {

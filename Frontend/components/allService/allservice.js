@@ -51,14 +51,22 @@ function displayContent(category) {
 }
 
 // Fetch data from API
-// fetch("https://d161-42-117-148-54.ngrok-free.app/api/categories")
-//   .then(response => {
-//     return response.json();
-//   })
-//   .then(data => {
-//     console.log(data);
-//   })
-//   .catch(error => {
-//     console.error('There was a problem with the fetch operation:', error);
-//   });
-  
+// function fetchData(url) {  
+//   fetch(url)  
+//       .then(response => {  
+//           if (!response.ok) {  
+//               // Nếu mã trạng thái không phải là 200-299, ném ra lỗi  
+//               throw new Error(`HTTP error! Status: ${response.status}`);  
+//           }  
+//           return response.json(); // Chuyển đổi phản hồi thành JSON  
+//       })  
+//       .then(data => {  
+//           console.log(data);  
+//       })  
+//       .catch(error => {  
+//           console.error('Có lỗi xảy ra:', error);  
+//       });  
+// }  
+
+// // Gọi hàm với URL  
+// fetchData('https://d161-42-117-148-54.ngrok-free.app/api/categories');  
