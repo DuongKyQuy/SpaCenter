@@ -142,6 +142,11 @@ body {
     color: var(--color-placehold-input);
 }
 
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+    display: none;
+}
+
 /* Responsive: Hide col2 on small screens */
 @media (max-width: 768px) {
     #signin {
