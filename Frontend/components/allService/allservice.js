@@ -37,15 +37,19 @@ function createTabs(categories) {
 // Hàm hiển thị nội dung theo tab được chọn
 function displayContent(category) {
   contentAllService.innerHTML = `
-    <img src="./assets/s1.jpg" alt="${category.name}" />
+    <img src="./assets/s${category.id}.jpg" alt="${category.name}" />
     <div class="wrapper-content-allservice">
-      <p>${category.description || 'No description available.'}</p>
+      <p>${category.description || "No description available."}</p>
       <ul>
-        ${category.services.map(service => `
-          <li>
-            <strong>${service.name}</strong>: ${service.duration} minutes - $${service.price}
-          </li>
-        `).join('')}
+        ${category.services
+          .map(
+            (service) => `
+          <p>
+            <span>${service.name}:</span> ${service.duration} minutes - $${service.price}
+          </p>
+        `
+          )
+          .join("")}
       </ul>
       <div class="container-btn">
         <button class="btn btn-banner">Book<br />now</button>
@@ -59,10 +63,11 @@ function displayContent(category) {
 
 // Fetch dữ liệu từ API và khởi tạo tabs
 fetch("https://precious-buzzard-brave.ngrok-free.app/api/categories", {
+  method: GET,
   headers: {
-    "ngrok-skip-browser-warning": "69420"
-  }
-})  
+    "ngrok-skip-browser-warning": "69420",
+  },
+})
   .then((response) => {
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
@@ -71,7 +76,7 @@ fetch("https://precious-buzzard-brave.ngrok-free.app/api/categories", {
   })
   .then((data) => {
     if (data.status === "success" && data.data && Array.isArray(data.data)) {
-      createTabs(data.data);      // Tạo tabs dựa trên dữ liệu từ API
+      createTabs(data.data); // Tạo tabs dựa trên dữ liệu từ API
       displayContent(data.data[0]); // Hiển thị nội dung của tab đầu tiên
     } else {
       console.error("Invalid data format:", data);
