@@ -1,63 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign In</title>
-    <link rel="stylesheet" href="./signIn.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
-    />
-  </head>
-  <body>
-    <div id="signin">
-      <div class="col1">
-        <div class="logo">
-          <p>SpaCenter</p>
-        </div>
-        <div class="signin-form">
-          <span>Welcome Back To SpaCenter</span>
-          <form id="loginForm">
-            <label for="email">Email </label>
-            <input
-              type="email"
-              id="email"
-              name="emailname"
-              placeholder="Enter your email"
-            />
-            <label for="password">PassWord </label>
-            <div class="password-field">
-              <input
-                type="password"
-                id="password"
-                name="password"
-                placeholder="Enter your password"
-              />
-              <span><i id="toggler" class="far fa-eye-slash"></i></span>
-            </div>
 
-            <p class="forgot-link">
-              <a
-                href="/Frontend/pages/forgotPassword/forgotPassword.html"
-                target="_parent"
-                >Forgot Password?</a
-              > 
-            </p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign In</title>
+  <link rel="stylesheet" href="./signIn.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+</head>
 
-            <button type="submit">Sign In</button>
-          </form>
-        </div>
+<body>
+  <div id="signin">
+    <div class="col1">
+      <div class="logo">
+        <p>SpaCenter</p>
       </div>
-      <div class="col2">
-        <img src="/Frontend/assets/signin.jpg" alt="Decorative Image" />
+      <div class="signin-form">
+        <span>Welcome Back To SpaCenter</span>
+        <form id="loginForm">
+          <label for="email">Email </label>
+          <input type="email" id="email" name="emailname" placeholder="Enter your email" />
+          <label for="password">PassWord </label>
+          <div class="password-field">
+            <input type="password" id="password" name="password" placeholder="Enter your password" />
+            <span><i id="toggler" class="far fa-eye-slash"></i></span>
+          </div>
+
+          <p class="forgot-link">
+            <a href="/Frontend/pages/forgotPassword/forgotPassword.html" target="_parent">Forgot Password?</a>
+          </p>
+
+          <button type="submit">Sign In</button>
+        </form>
       </div>
     </div>
+    <div class="col2">
+      <img src="/Frontend/assets/signin.jpg" alt="Decorative Image" />
+    </div>
+  </div>
+  <script src="/Frontend/config/config.js"></script>
+  <script src="./signIn.js"></script>
+</body>
 
-    <script src="./signIn.js"></script>
-  </body>
 </html>

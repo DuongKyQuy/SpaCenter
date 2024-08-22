@@ -84,7 +84,7 @@ form.addEventListener("submit", function (e) {
     phone: form.phone.value,
   };
 
-  fetch("https://d161-42-117-148-54.ngrok-free.app/api/auth/regis", {
+  fetch(API_sign_up, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

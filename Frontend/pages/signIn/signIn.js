@@ -44,7 +44,7 @@ form.addEventListener("submit", function (event) {
     username: form.email.value.trim(),
     password: form.password.value.trim(),
   };
-  fetch("https://d161-42-117-148-54.ngrok-free.app/api/auth/login", {
+  fetch(API_log_in, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
