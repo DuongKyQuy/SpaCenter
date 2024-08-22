@@ -11,13 +11,33 @@
           <input type="date" placeholder="Date" id="date-booking" class="date-booking" />
           <div class="select-wrapper">
             <select id="service-booking">
-              <option value="" disabled selected hidden>Select Service</option>
-              <option value="Fullbodymassage">Full body massage</option>
-              <option value="Facialcleansing/massage">Facial cleansing/ massage</option>
-              <option value="Stonemassage">Stone massage</option>
-              <option value="Aromatherapymassage">Aromatherapy massage</option>
+                <option value="" disabled selected hidden>Select Service</option>
+                
+                <optgroup label="Facial Care">
+                    <option value="Cleansing">Cleansing</option>
+                    <option value="Moisturizing">Moisturizing</option>
+                    <option value="Skintreatment">Skin Treatment</option>
+                </optgroup>
+                
+                <optgroup label="Nail Care">
+                    <option value="ManicurePedicure">Manicure/Pedicure</option>
+                    <option value="NailTreatment">Nail Treatment</option>
+                </optgroup>
+                
+                <optgroup label="Body Massage">
+                    <option value="RelaxingMassage">Relaxing Massage</option>
+                    <option value="IntensiveTreatment">Intensive Treatment</option>
+                    <option value="PostpartumCare">Postpartum Care</option>
+                </optgroup>
+                
+                <optgroup label="Body Care">
+                    <option value="WholeBodySkinCare">Whole Body Skin Care</option>
+                    <option value="ReduceFatFirmMuscles">Reduce Fat, Firm Muscles</option>
+                    <option value="SkinTreatment">Skin Treatment</option>
+                </optgroup>
+                
             </select>
-          </div>
+        </div>
         </div>
         <div class="select-wrapper">
           <select id="staff-booking">
@@ -34,17 +54,31 @@
         <div id="time-booking">
           <div class="row1">
             <button>9:00</button>
+            <button>09:30</button>
             <button>10:00</button>
+            <button>10:30</button>
             <button>11:00</button>
-            <button>12:00</button>
-            <button>13:00</button>
           </div>
           <div class="row2">
+            <button>11:30</button>
+            <button>12:00</button>
+            <button>12:30</button>
+            <button>13:00</button>
+            <button>13:30</button>
+          </div>
+          <div class="row3">
             <button>14:00</button>
+            <button>14:30</button>
             <button>15:00</button>
+            <button>15:30</button>
             <button>16:00</button>
+          </div>
+          <div class="row4">
+            <button>16:30</button>
             <button>17:00</button>
+            <button>17:30</button>
             <button>18:00</button>
+            <button class="hidden-btn"></button>
           </div>
 
         </div>

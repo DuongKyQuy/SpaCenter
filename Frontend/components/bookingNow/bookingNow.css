@@ -117,11 +117,15 @@ input[type="date"]:before {
   width: 100%; 
 }
 
-.row1, .row2 {
+.row1, .row2, .row3, .row4 {
   display: flex;
   width: 100%;
   gap: 8px; 
   margin-bottom: 8px; 
+}
+
+.hidden-btn {
+  visibility: hidden; 
 }
 
 #time-booking button {

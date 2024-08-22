@@ -116,9 +116,9 @@ input[type="date"]:before {
 }
 
 #service-booking {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
+  appearance: none; 
+  -webkit-appearance: none; 
+  -moz-appearance: none; 
   width: 100%;
   border-radius: 4px;
   border: 0.8px solid #747474;
@@ -126,14 +126,14 @@ input[type="date"]:before {
 }
 
 .select-wrapper::after {
-  content: '\f107';
+  content: '\f107'; 
   font-family: 'FontAwesome';
   position: absolute;
-  right: 8px;
+  right: 8px; 
   top: 50%;
   transform: translateY(-50%);
-  pointer-events: none;
-  color: #747474;
+  pointer-events: none; 
+  color: #747474; 
 }
 
 #staff-booking {
@@ -152,12 +152,15 @@ input[type="date"]:before {
   width: 100%;
 }
 
-.row1,
-.row2 {
+.row1, .row2, .row3, .row4 {
   display: flex;
   width: 100%;
-  gap: 8px;
-  margin-bottom: 8px;
+  gap: 8px; 
+  margin-bottom: 8px; 
+}
+
+.hidden-btn {
+  visibility: hidden; 
 }
 
 #time-booking button {
