@@ -4,5 +4,7 @@ const API_sign_up = "https://precious-buzzard-brave.ngrok-free.app/api/auth/regi
 const API_GET_CATEGORY = "https://precious-buzzard-brave.ngrok-free.app/api/categories"
 
 const API_GET_APOINTMENT_BY_TOKEN = "https://precious-buzzard-brave.ngrok-free.app/api/self/appointment"
+const API_GET_APPOINTMENT_TIME_BY_TECHNICIAN = "https://precious-buzzard-brave.ngrok-free.app/api/appointments/disable-time?"
+
 
 const token = localStorage.getItem("authToken");
