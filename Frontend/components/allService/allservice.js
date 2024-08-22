@@ -62,8 +62,8 @@ function displayContent(category) {
 }
 
 // Fetch dữ liệu từ API và khởi tạo tabs
-fetch("https://precious-buzzard-brave.ngrok-free.app/api/categories", {
-  method: GET,
+fetch(API_GET_CATEGORY, {
+  method: "GET",
   headers: {
     "ngrok-skip-browser-warning": "69420",
   },

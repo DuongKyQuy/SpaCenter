@@ -27,6 +27,7 @@ async function logoutUser(token) {
     if (data) {
       console.log(data);
       localStorage.removeItem("authToken");
+      window.location.href = "/Frontend/index.html";
       location.reload();
     }
   } catch (error) {
