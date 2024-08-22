@@ -5,10 +5,11 @@
   align-items: center;
 }
 
-.logo-header {
+.logo-header a {
   color: var(--color-secondary);
   font-family: var(--font-family-logo);
   font-size: var(--font-size-lg);
+  text-decoration: none;
 }
 
 .menu {
