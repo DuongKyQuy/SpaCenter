@@ -4,7 +4,7 @@ form.addEventListener("submit", function (event) {
   event.preventDefault(); // Ngăn form submit mặc định
 
   const email = form.email.value.trim();
-fetch(`https://d161-42-117-148-54.ngrok-free.app/api/auth/forget-password?email=${encodeURIComponent(email)}`, {
+fetch(`https://precious-buzzard-brave.ngrok-free.app/api/auth/forget-password?email=${encodeURIComponent(email)}`, {
   method: "POST",
   headers: {
     "Content-Type": "application/json",
