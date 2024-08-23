@@ -62,26 +62,29 @@ function displayContent(category) {
 }
 
 // Fetch dữ liệu từ API và khởi tạo tabs
-fetch(API_GET_CATEGORY, {
-  method: "GET",
-  headers: {
-    "ngrok-skip-browser-warning": "69420",
-  },
-})
-  .then((response) => {
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-    return response.json(); // Đọc phản hồi dưới dạng JSON
+async function getCategory() {
+  await fetch(API_GET_CATEGORY, {
+    method: "GET",
+    headers: {
+      "ngrok-skip-browser-warning": "69420",
+    },
   })
-  .then((data) => {
-    if (data.status === "success" && data.data && Array.isArray(data.data)) {
-      createTabs(data.data); // Tạo tabs dựa trên dữ liệu từ API
-      displayContent(data.data[0]); // Hiển thị nội dung của tab đầu tiên
-    } else {
-      console.error("Invalid data format:", data);
-    }
-  })
-  .catch((error) => {
-    console.error("Error fetching data:", error);
-  });
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      return response.json(); // Đọc phản hồi dưới dạng JSON
+    })
+    .then((data) => {
+      if (data.status === "success" && data.data && Array.isArray(data.data)) {
+        createTabs(data.data); // Tạo tabs dựa trên dữ liệu từ API
+        displayContent(data.data[0]); // Hiển thị nội dung của tab đầu tiên
+      } else {
+        console.error("Invalid data format:", data);
+      }
+    })
+    .catch((error) => {
+      console.error("Error fetching data:", error);
+    });
+}
+getCategory();

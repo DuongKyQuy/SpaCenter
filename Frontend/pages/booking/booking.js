@@ -62,7 +62,9 @@ async function postBooking(formDataBooking) {
   await fetch(API_POST_APPOINTMENT, {
     method: "POST",
     headers: {
-      "Content-Type": "application/json"
+      "Content-Type": "application/json",
+      accept: "*/*",
+      Authorization: `Bearer ${token}`,
     },
     body: JSON.stringify(formDataBooking)
   })
@@ -74,11 +76,11 @@ async function postBooking(formDataBooking) {
     })
     .then(data => {
       console.log(data);
-      if (data.success) {
+      if (data.status === 'success') {
         alert("Successfull")
         window.location.href = "/Frontend/index.html"
       } else {
-
+        
       }
     })
     .catch(error => {
@@ -105,8 +107,6 @@ form_booking.addEventListener("submit", (e) => {
   const startDateTime = `${selectedDate} ${startTime}:00`;
 
   const startDateTimeObj = new Date(`${selectedDate}T${startTime}:00`);
-  console.log(startDateTimeObj);
-
 
   startDateTimeObj.setMinutes(startDateTimeObj.getMinutes() + 59);
 
