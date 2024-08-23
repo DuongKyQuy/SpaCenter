@@ -42,14 +42,14 @@ function displayContent(category) {
       <p>${category.description || "No description available."}</p>
       <ul>
         ${category.services
-          .map(
-            (service) => `
+      .map(
+        (service) => `
           <p>
             <span>${service.name}:</span> ${service.duration} minutes - $${service.price}
           </p>
         `
-          )
-          .join("")}
+      )
+      .join("")}
       </ul>
       <div class="container-btn">
         <button class="btn btn-banner">Book<br />now</button>

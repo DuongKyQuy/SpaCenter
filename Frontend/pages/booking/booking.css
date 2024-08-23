@@ -96,7 +96,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 input[type="date"]:before {
-  color: transparent;
+  color: transparent; 
   background: none;
   display: block;
   font-family: "FontAwesome";
@@ -104,7 +104,7 @@ input[type="date"]:before {
   width: 16px;
   height: 20px;
   position: absolute;
-  top: 16px;
+  top: 13px;
   right: 8px;
   color: #747474;
 }
@@ -199,19 +199,21 @@ input[type="date"]:before {
   background-color: #301d1d;
 }
 
-/* Style for disabled buttons */
 #time-booking button:disabled {
-  cursor: not-allowed; /* Change cursor to indicate the button is not clickable */
-  background-color: #ccc; /* Lighten the background to indicate it's disabled */
-  color: #666; /* Dim the text color */
-  border: 1px solid #999; /* Adjust border color if needed */
+  cursor: not-allowed; 
+  background-color: #ccc; 
+  border: 1px solid #999; 
 }
 
-/* Prevent hover and focus effects on disabled buttons */
-#time-booking button:disabled:hover,
+/* #time-booking button:disabled:hover,
 #time-booking button:disabled:focus {
-  outline: none; /* Remove any outline that might appear */
-  background-color: #ccc; /* Ensure the background doesn't change on hover */
-  color: #666; /* Ensure the text color doesn't change on hover */
-  border: 1px solid #999; /* Ensure border color stays the same */
+  outline: none; 
+  background-color: #ccc; 
+  color: #666; 
+  border: 1px solid #999; 
+} */
+
+#time-booking button.selected {
+  background-color: #4CAF50; 
+  color: white;
 }
