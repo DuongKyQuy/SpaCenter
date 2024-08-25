@@ -148,7 +148,7 @@ input[type="password"]::-ms-clear {
 }
 
 /* Responsive: Hide col2 on small screens */
-@media (max-width: 768px) {
+@media screen and (max-width: 1024px) and (min-width: 411px) {
     #signin {
         width: 90%;
         flex-direction: column;

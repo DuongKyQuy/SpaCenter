@@ -29,7 +29,6 @@
 
 .link-user {
   position: relative;
-  /* display: inline-block; */
 }
 
 .dropdown-content {
@@ -60,4 +59,51 @@
 
 .link-user:hover .dropdown-content {
   display: block;
+}
+
+.menu-toggle {
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .menu a {
+    display: none;
+    font-size: var(--font-size-xxs);
+  }
+
+  .menu.active a,
+  .menu.active .link-login,
+  .menu.active {
+    display: block;
+    text-align: right;
+    padding: 12px 0;
+    font-weight: var(--font-weight-regular);
+  }
+
+  .menu.active .link-login {
+    display: none;
+  }
+
+  .menu.active a {
+    text-align: center;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 20px;
+  }
+
+  .dropdown-content {
+    min-width: 80px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  }
+
 }

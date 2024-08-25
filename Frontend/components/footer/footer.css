@@ -1,4 +1,5 @@
 @import url(../../config/global.css);
+
 #footer {
   background-color: var(--color-secondary);
   height: var(--height-footer);
@@ -17,7 +18,7 @@
   align-self: center;
 }
 
-#logo-footer a{
+#logo-footer a {
   color: var(--color-secondary);
   font-family: var(--font-family-logo);
   font-size: var(--font-size-xl);
@@ -34,26 +35,68 @@
   gap: var(--gap-20);
 }
 
-.connect img {
-  object-fit: cover;
-  cursor: pointer;
-  max-height: 200px;
-  width: -webkit-fill-available;
+.toggle-icon {
+  display: none;
 }
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+iframe {
+  max-height: 200px;
+  width: 250px;
+  border: 0;
+  border-radius: 4px;
+}
+
 .connect h4 {
   margin-bottom: 20px;
 }
 
-@media (max-width: 1024px) {
-}
-
-@media (max-width: 768px) {
-  .infor,
-  .customer-service {
-    gap: var(--gap-10);
+/* Responsive Styles */
+@media screen and (max-width: 1024px) and (min-width: 411px) {
+  #footer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: auto;
   }
 
-  h4 {
-    font-size: var(--font-size-xxs);
+  .infor,
+  .customer-service,
+  .connect {
+    width: 100%;
+  }
+
+  .infor h4,
+  .customer-service h4,
+  .connect h4 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .toggle-icon {
+    font-weight: bold;
+    cursor: pointer;
+    display: inline;
+
+  }
+
+  .links {
+    display: none;
+  }
+
+  .links a {
+    display: block;
+    padding: 5px 0;
+  }
+
+  .links iframe {
+    width: 100%;
   }
 }
