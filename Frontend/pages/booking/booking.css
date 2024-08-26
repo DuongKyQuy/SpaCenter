@@ -44,6 +44,20 @@ body {
   z-index: 3;
 }
 
+.logo-header{
+position: fixed;
+top: 5%;
+left: 3%;
+opacity: 0.8;
+}
+
+.logo-header a {
+  color: var(--color-secondary);
+  font-family: var(--font-family-logo);
+  font-size: var(--font-size-md);
+  text-decoration: none;
+}
+
 .content h2 {
   font-size: var(--font-size-md);
   margin-bottom: var(--margin-20);
