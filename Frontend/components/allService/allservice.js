@@ -1,40 +1,45 @@
+// Shorthand to select single and multiple DOM elements
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
+// Select the elements for the header, content section, and underline line
 const headerAllService = $(".header-allservice");
 const contentAllService = $(".content-allservice");
 const line = $(".header-allservice .line");
 
-// Hàm tạo các tab tiêu đề và thiết lập tab đầu tiên là active
+// Function to create tabs based on categories and set the first tab as active
 function createTabs(categories) {
   categories.forEach((category, index) => {
     const tab = document.createElement("div");
     tab.className = "header-allservice-title";
+    
     if (index === 0) tab.classList.add("active");
+    
     tab.textContent = category.name;
+    
     headerAllService.insertBefore(tab, line);
 
     tab.onclick = function () {
-      // Đổi tab đang active
+      // Switch the active tab
       $(".header-allservice-title.active").classList.remove("active");
       this.classList.add("active");
 
-      // Di chuyển đường gạch chân (underline)
+      // Move the underline to the active tab
       line.style.left = this.offsetLeft + "px";
       line.style.width = this.offsetWidth + "px";
 
-      // Hiển thị nội dung tương ứng với tab
+      // Display the content associated with the selected tab
       displayContent(category);
     };
   });
 
-  // Khởi tạo vị trí và độ rộng của đường gạch chân dưới tab đầu tiên
+  // Initialize the position and width of the underline for the first tab
   const tabActive = $(".header-allservice-title.active");
   line.style.width = tabActive.offsetWidth + "px";
   line.style.left = tabActive.offsetLeft + "px";
 }
 
-// Hàm hiển thị nội dung theo tab được chọn
+// Function to display content according to the selected tab
 function displayContent(category) {
   contentAllService.innerHTML = `
     <img src="./assets/s${category.id}.jpg" alt="${category.name}" />
@@ -42,14 +47,14 @@ function displayContent(category) {
       <p>${category.description || "No description available."}</p>
       <ul>
         ${category.services
-      .map(
-        (service) => `
-          <p>
-            <span>${service.name}:</span> ${service.duration} minutes - $${service.price}
-          </p>
-        `
-      )
-      .join("")}
+          .map(
+            (service) => `
+              <p>
+                <span>${service.name}:</span> ${service.duration} minutes - $${service.price}
+              </p>
+            `
+          )
+          .join("")}
       </ul>
       <div class="container-btn">
         <button class="btn btn-banner"><a href="/Frontend/pages/booking/booking.html">Book<br />now</a></button>
@@ -61,7 +66,7 @@ function displayContent(category) {
   `;
 }
 
-// Fetch dữ liệu từ API và khởi tạo tabs
+// Function to fetch category data from API and initialize tabs
 async function getCategory() {
   await fetch(API_GET_CATEGORY, {
     method: "GET",
@@ -73,12 +78,12 @@ async function getCategory() {
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
-      return response.json(); // Đọc phản hồi dưới dạng JSON
+      return response.json(); 
     })
     .then((data) => {
       if (data.status === "success" && data.data && Array.isArray(data.data)) {
-        createTabs(data.data); // Tạo tabs dựa trên dữ liệu từ API
-        displayContent(data.data[0]); // Hiển thị nội dung của tab đầu tiên
+        createTabs(data.data); 
+        displayContent(data.data[0]); 
       } else {
         console.error("Invalid data format:", data);
       }
@@ -87,4 +92,5 @@ async function getCategory() {
       console.error("Error fetching data:", error);
     });
 }
+
 getCategory();

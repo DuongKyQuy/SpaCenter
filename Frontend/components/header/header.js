@@ -46,3 +46,44 @@ async function logoutUser(token) {
 link_log_out.addEventListener("click", () => {
   logoutUser(auhtToken);
 });
+
+
+// const link_login = document.querySelector(".link-login");
+// const avt_User = document.querySelector(".link-user");
+
+// const link_log_out = document.querySelector(".link-log-out");
+// const authToken = localStorage.getItem("authToken");
+
+// if (authToken && link_login && avt_User) {
+//   link_login.classList.add("none");
+//   avt_User.classList.remove("none");
+// }
+
+// async function logoutUser(token) {
+//   try {
+//     const response = await fetch(API_log_out, {
+//       method: "POST",
+//       headers: {
+//         accept: "*/*",
+//         Authorization: `Bearer ${token}`,
+//       },
+//     });
+//     if (!response.ok) {
+//       throw new Error("Failed to log out");
+//     }
+//     const data = await response.json();
+//     if (data) {
+//       console.log(data);
+//       localStorage.removeItem("authToken");
+//       window.location.href = "/Frontend/index.html";
+//     }
+//   } catch (error) {
+//     console.error("Logout failed:", error.message);
+//   }
+// }
+
+// if (link_log_out) {
+//   link_log_out.addEventListener("click", () => {
+//     logoutUser(authToken);
+//   });
+// }

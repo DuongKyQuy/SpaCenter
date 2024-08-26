@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="./components/bookingnow/bookingnow.css" />
+<script src="./bookingNow.js"></script>
 
 <div id="bookingnow">
   <div class="container-bookingnow">
@@ -11,79 +12,68 @@
           <input type="date" placeholder="Date" id="date-booking" class="date-booking" />
           <div class="select-wrapper">
             <select id="service-booking">
-                <option value="" disabled selected hidden>Select Service</option>
-                
-                <optgroup label="Facial Care">
-                    <option value="Cleansing">Cleansing</option>
-                    <option value="Moisturizing">Moisturizing</option>
-                    <option value="Skintreatment">Skin Treatment</option>
-                </optgroup>
-                
-                <optgroup label="Nail Care">
-                    <option value="ManicurePedicure">Manicure/Pedicure</option>
-                    <option value="NailTreatment">Nail Treatment</option>
-                </optgroup>
-                
-                <optgroup label="Body Massage">
-                    <option value="RelaxingMassage">Relaxing Massage</option>
-                    <option value="IntensiveTreatment">Intensive Treatment</option>
-                    <option value="PostpartumCare">Postpartum Care</option>
-                </optgroup>
-                
-                <optgroup label="Body Care">
-                    <option value="WholeBodySkinCare">Whole Body Skin Care</option>
-                    <option value="ReduceFatFirmMuscles">Reduce Fat, Firm Muscles</option>
-                    <option value="SkinTreatment">Skin Treatment</option>
-                </optgroup>
-                
+              <option value="" disabled selected hidden>Select Service</option>
+
+              <optgroup label="Facial Care">
+                <option value="1">Cleansing</option>
+                <option value="2">Moisturizing</option>
+                <option value="3">Skin Treatment</option>
+              </optgroup>
+
+              <optgroup label="Nail Care">
+                <option value="4">Manicure/Pedicure</option>
+                <option value="5">Nail Treatment</option>
+              </optgroup>
+
+              <optgroup label="Body Massage">
+                <option value="6">Relaxing Massage</option>
+                <option value="7">Intensive Treatment</option>
+                <option value="8">Postpartum Care</option>
+              </optgroup>
+
+              <optgroup label="Body Care">
+                <option value="9">Whole Body Skin Care</option>
+                <option value="10">Reduce Fat, Firm Muscles</option>
+                <option value="11">Skin Treatment</option>
+              </optgroup>
+
             </select>
-        </div>
+          </div>
         </div>
         <div class="select-wrapper">
           <select id="staff-booking">
             <option value="" disabled selected hidden>Select Technician</option>
-            <option value="Staff1">Staff1</option>
-            <option value="Staff2">
-              Staff2
-            </option>
-            <option value="Staff3">Staff3</option>
-            <option value="Staff4">Staff4</option>
+            <option value="1">Staff1</option>
+            <option value="2">Staff2</option>
+            <option value="3">Staff3</option>
+            <option value="4">Staff4</option>
           </select>
         </div>
-        
         <div id="time-booking">
           <div class="row1">
+            <button>8:00</button>
             <button>9:00</button>
-            <button>09:30</button>
             <button>10:00</button>
-            <button>10:30</button>
-            <button>11:00</button>
           </div>
           <div class="row2">
-            <button>11:30</button>
+            <button>11:00</button>
             <button>12:00</button>
-            <button>12:30</button>
             <button>13:00</button>
-            <button>13:30</button>
           </div>
           <div class="row3">
             <button>14:00</button>
-            <button>14:30</button>
             <button>15:00</button>
-            <button>15:30</button>
             <button>16:00</button>
           </div>
           <div class="row4">
-            <button>16:30</button>
             <button>17:00</button>
-            <button>17:30</button>
             <button>18:00</button>
-            <button class="hidden-btn"></button>
+            <button>19:00</button>
           </div>
-
         </div>
+
         <div class="container-btn">
-          <button class="btn btn-banner">Book<br />now</button>
+          <button class="btn btn-banner"><a href="/Frontend/pages/account/account.html">Book<br />now</a></button>
           <svg class="row" xmlns="http://www.w3.org/2000/svg" width="72" height="16" viewBox="0 0 72 16" fill="none">
             <path
               d="M70.7357 8.70711C71.1262 8.31658 71.1262 7.68342 70.7357 7.29289L64.3717 0.928932C63.9812 0.538408 63.348 0.538408 62.9575 0.928932C62.567 1.31946 62.567 1.95262 62.9575 2.34315L68.6143 8L62.9575 13.6569C62.567 14.0474 62.567 14.6805 62.9575 15.0711C63.348 15.4616 63.9812 15.4616 64.3717 15.0711L70.7357 8.70711ZM0 9L70.0286 9V7L0 7L0 9Z"
