@@ -3,6 +3,21 @@ const staffBooking = document.getElementById("staff-booking");
 const allTimeButtons = document.querySelectorAll("#time-booking button");
 const form_booking = document.getElementById("form-bookingnow");
 const buttonNotDisable = document.querySelectorAll("#time-booking button:not([disabled])");
+const dateInput = document.getElementById("date-booking");
+
+// Set the default date input to tomorrow's date and disable past dates
+document.addEventListener("DOMContentLoaded", () => {
+  const today = new Date();
+  
+  // Set min attribute to tomorrow's date
+  const tomorrow = new Date(today);
+  tomorrow.setDate(today.getDate() + 1);
+  const tomorrowDate = tomorrow.toISOString().split('T')[0];
+  dateInput.setAttribute("min", tomorrowDate);
+  
+  // Default date to tomorrow
+  dateInput.value = tomorrowDate;
+});
 
 // Event listener for changes in staff selection
 staffBooking.addEventListener("change", function () {
@@ -10,7 +25,6 @@ staffBooking.addEventListener("change", function () {
   const selectedDate = document.getElementById("date-booking").value;
   const apiUrl = `${API_GET_APPOINTMENT_TIME_BY_TECHNICIAN}technician-id=${selectedStaff}&date=${selectedDate}`;
 
-  // If both staff and date are selected
   if (selectedStaff && selectedDate) {
     buttonNotDisable.forEach(btn => btn.classList.remove("selected"));
     allTimeButtons.forEach(button => {
@@ -52,6 +66,29 @@ staffBooking.addEventListener("change", function () {
     }
     getTimeDisableByTechnician();
   }
+});
+
+// Event listener for changes in date selection
+dateInput.addEventListener("change", function () {
+  const selectedDate = new Date(this.value);
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  // If selected date is before today, reset it to tomorrow
+  if (selectedDate < today) {
+    const tomorrow = new Date(today);
+    tomorrow.setDate(today.getDate() + 1);
+    this.value = tomorrow.toISOString().split('T')[0];
+    alert("Please select a date from tomorrow onwards.");
+  }
+
+  // Re-enable all time buttons if the date is valid
+  allTimeButtons.forEach(button => {
+    button.disabled = false;
+    button.classList.remove("selected");
+  });
+
+  // Additional logic can go here to disable time slots based on selected date and staff
 });
 
 // Add event listeners to available time buttons to handle selection
@@ -135,14 +172,6 @@ form_booking.addEventListener("submit", (e) => {
     ]
   };
 
-  console.log("Posting the following data:", formDataBooking);
-
+  
   postBooking(formDataBooking);
-});
-
-// Set the default date input to today’s date
-document.addEventListener("DOMContentLoaded", () => {
-  const dateInput = document.getElementById("date-booking");
-  const today = new Date().toISOString().split('T')[0];
-  dateInput.value = today;
 });
